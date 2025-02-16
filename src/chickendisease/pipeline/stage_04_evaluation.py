@@ -3,8 +3,6 @@ from chickendisease.components.evaluation import Evaluation
 from chickendisease import logger
 
 
-
-
 STAGE_NAME = "Evaluation stage"
 
 

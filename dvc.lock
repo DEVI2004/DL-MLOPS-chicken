@@ -5,12 +5,12 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 78383da72c9bcfb61603068ef18316f8
-      size: 821
+      md5: 564d99aef7e319d72d01321973cb7334
+      size: 953
     - path: src/chickendisease/pipeline/stage_01_data_ingestion.py
       hash: md5
-      md5: 7e757bdd779b5e0267d519eb2873f55e
-      size: 911
+      md5: f35f8f629cbbd10da167a014bcf9315f
+      size: 918
     outs:
     - path: artifacts/data_ingestion/unzipped_files/Chicken-fecal-images
       hash: md5
@@ -22,8 +22,8 @@ stages:
     deps:
     - path: config/config.yaml
       hash: md5
-      md5: 78383da72c9bcfb61603068ef18316f8
-      size: 821
+      md5: 564d99aef7e319d72d01321973cb7334
+      size: 953
     - path: src/chickendisease/pipeline/stage_02_prepare_base_model.py
       hash: md5
       md5: 79719c60e1da0189fa6a75e0d1bc595a
@@ -41,7 +41,7 @@ stages:
     outs:
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 1f3a8b8c85dc7ba69053e07f87442663.dir
+      md5: 7830a0dbbef1da9a6c86f15db481ab4e.dir
       size: 118059248
       nfiles: 2
   training:
@@ -54,13 +54,13 @@ stages:
       nfiles: 390
     - path: artifacts/prepare_base_model
       hash: md5
-      md5: 1f3a8b8c85dc7ba69053e07f87442663.dir
+      md5: 7830a0dbbef1da9a6c86f15db481ab4e.dir
       size: 118059248
       nfiles: 2
     - path: config/config.yaml
       hash: md5
-      md5: 78383da72c9bcfb61603068ef18316f8
-      size: 821
+      md5: 564d99aef7e319d72d01321973cb7334
+      size: 953
     - path: src/chickendisease/components/prepare_callbacks.py
       hash: md5
       md5: 1ca82f54c6e66a1f89a8d1f717f07ce3
@@ -81,7 +81,7 @@ stages:
     outs:
     - path: artifacts/training/model.h5
       hash: md5
-      md5: ce3e1bb15063c42bedfcaabd103808b6
+      md5: cd6c947d242ec52b3af791583d9cd01a
       size: 59340720
   evaluation:
     cmd: python src/chickendisease/pipeline/stage_04_evaluation.py
@@ -93,16 +93,16 @@ stages:
       nfiles: 390
     - path: artifacts/training/model.h5
       hash: md5
-      md5: ce3e1bb15063c42bedfcaabd103808b6
+      md5: cd6c947d242ec52b3af791583d9cd01a
       size: 59340720
     - path: config/config.yaml
       hash: md5
-      md5: 78383da72c9bcfb61603068ef18316f8
-      size: 821
+      md5: 564d99aef7e319d72d01321973cb7334
+      size: 953
     - path: src/chickendisease/pipeline/stage_04_evaluation.py
       hash: md5
-      md5: 45ac7da990d6261f1b07405d3db4a860
-      size: 886
+      md5: f8267cc283f72994f514b5423118b942
+      size: 882
     params:
       params.yaml:
         BATCH_SIZE: 16
@@ -113,5 +113,5 @@ stages:
     outs:
     - path: scores.json
       hash: md5
-      md5: f605cc563e6a11f505a7442089f3acb9
-      size: 74
+      md5: 151e51ddae05c8d26814016cbcb9a6a6
+      size: 73

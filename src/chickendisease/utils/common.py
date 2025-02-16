@@ -1,4 +1,5 @@
 import os
+#pre built box exception
 from box.exceptions import BoxValueError
 import yaml
 from chickendisease import logger
@@ -10,8 +11,7 @@ from pathlib import Path
 from typing import Any
 import base64
 
-
-
+#function to read yaml file
 @ensure_annotations
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     try:
@@ -33,7 +33,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
 
     
 
-
+#create directories
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
@@ -48,6 +48,7 @@ def create_directories(path_to_directories: list, verbose=True):
             logger.info(f"created directory at: {path}")
 
 
+#Saves a Python dictionary to a JSON file.
 @ensure_annotations
 def save_json(path: Path, data: dict):
     """save json data

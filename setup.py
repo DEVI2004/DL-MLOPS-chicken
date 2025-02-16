@@ -1,3 +1,5 @@
+#remains constant in every project
+
 import setuptools
 
 with open("README.md", "r", encoding="utf-8") as f:

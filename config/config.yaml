@@ -1,8 +1,10 @@
+#creating a folder named artifacrs
 artifacts_root: artifacts
 
+#in which data ingestion is created and all the images are unzipped here
 data_ingestion:
   root_dir: artifacts/data_ingestion
-  source_URL: https://github.com/DEVI2004/Dataset_chicken/raw/refs/heads/main/Chicken-fecal-images.zip
+  source_URL: https://github.com/DEVI2004/Dataset_chicken/raw/refs/heads/main/Chicken-fecal-images.zip # to download my data
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion/unzipped_files
 

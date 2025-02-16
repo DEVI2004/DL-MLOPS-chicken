@@ -3,7 +3,10 @@ import os
 
 # Add the 'src' directory to the PYTHONPATH
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
+
+#import log from chickendisease-->__init__.py
 from chickendisease import logger
+
 from chickendisease.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from chickendisease.pipeline.stage_02_prepare_base_model import PrepareBaseModelTrainingPipeline
 from chickendisease.pipeline.stage_03_training import ModelTrainingPipeline

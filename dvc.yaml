@@ -1,10 +1,12 @@
+#integrating all the pipelines here
+#stages are nothing but which pipeline we are going to run
 
 stages:
   data_ingestion:
-    cmd: python src/chickendisease/pipeline/stage_01_data_ingestion.py
-    deps:
+    cmd: python src/chickendisease/pipeline/stage_01_data_ingestion.py #if we are excuting this file we are executing whole data ingestion part
+    deps: #data ingestion depends on this file
       - src/chickendisease/pipeline/stage_01_data_ingestion.py
-      - config/config.yaml
+      - config/config.yaml 
     outs:
       - artifacts/data_ingestion/unzipped_files/Chicken-fecal-images
 
