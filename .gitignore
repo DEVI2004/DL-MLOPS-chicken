@@ -1,0 +1,26 @@
+# Ignore Virtual Environment
+venv/
+dedev/
+
+# Ignore Python Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Data and Models
+artifacts/
+data/
+logs/
+*.h5
+*.pkl
+*.pickle
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore DVC Cache (if using DVC)
+.dvc/
+
+.artifacts/
